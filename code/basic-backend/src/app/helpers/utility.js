@@ -1,3 +1,17 @@
+import { hash } from "bcrypt";
+import {
+  createUser,
+  findOneUser,
+} from "../models/auth/repository/userRepository.js";
+const superAdminObj = {
+  _id: "65894648391fa595dd20e8d0",
+  name: "Super Admin",
+  email: "superadmin@gmail.com",
+  password: "1234",
+  isActive: true,
+  status: "Created",
+  role: "SuperAdmin",
+};
 export function removeFile(destination) {
   if (fs.existsSync(destination)) {
     fs.unlinkSync(destination);
@@ -25,6 +39,16 @@ export function outputData(rows) {
     rows: rows[0]?.data || [],
     count: rows[0]?.metadata?.[0]?.total || 0,
   };
+}
+export async function insertSuperAdmin() {
+  const exist = await findOneUser(
+    { _id: "65894648391fa595dd20e8d0" },
+    { _id: 1 }
+  );
+  if (!exist) {
+    superAdminObj.password = await hash(superAdminObj.password, 10);
+    await createUser(superAdminObj);
+  }
 }
 
 export const getMatchData = async (project, search) => {

@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
-import {Router} from "@angular/router";
-import {SpinnerService, StorageService, ToastService} from "@core/services";
+import {SpinnerService, ToastService} from "@core/services";
 import {ProductService} from "@services/sales";
+import {SharedService} from "@services/settings/shared.service";
 
 @Component({
     selector: "app-home",
@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
     constructor(
         private spinner: SpinnerService,
         private productService: ProductService,
-        private router: Router,
-        private toasterService: ToastService,
+        private sharedService: SharedService,
+        private toasterService: ToastService
     ) {}
     ngOnInit(): void {
         this.getAll();
@@ -40,6 +40,7 @@ export class HomeComponent implements OnInit {
                 this.toasterService.success("Added to Cart Successfully");
             }
         });
+        this.sharedService.refreshData({});
     }
     trackByFn(index: number, slide: any): any {
         return index;

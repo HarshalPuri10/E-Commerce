@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {SpinnerService} from "@core/services";
 import {ProductService} from "@services/sales";
+import {SharedService} from "@services/settings/shared.service";
 
 @Component({
     selector: "app-add-to-cart",
@@ -8,7 +9,11 @@ import {ProductService} from "@services/sales";
     styleUrls: ["./add-to-cart.component.scss"]
 })
 export class AddToCartComponent implements OnInit {
-    constructor(private productService: ProductService, private spinner: SpinnerService) {}
+    constructor(
+        private productService: ProductService,
+        private spinner: SpinnerService,
+        private sharedService: SharedService
+    ) {}
     tableData: any = [];
     subTotal: number = 0;
     grandTotal: number = 0;
@@ -54,6 +59,7 @@ export class AddToCartComponent implements OnInit {
             if (success) {
                 this.getAll();
             }
+            this.sharedService.refreshData({});
         });
     }
 }

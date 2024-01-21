@@ -11,6 +11,7 @@ import customResponse from "./app/helpers/customResponse.js";
 import fs from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { insertSuperAdmin } from "./app/helpers/utility.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 env.config();
@@ -23,6 +24,7 @@ app.use("/", configExpressJwt());
 app.use(bodyParser.json());
 app.use(customResponse);
 app.use("/assets", express.static(join(__dirname, "assets")));
+insertSuperAdmin();
 
 //Route Prefixes
 app.use("/", apiRouter);

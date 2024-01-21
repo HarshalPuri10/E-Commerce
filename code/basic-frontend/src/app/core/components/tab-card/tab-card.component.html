@@ -1,0 +1,21 @@
+<div
+  class="container-fluid tabs-card-page"
+  [ngStyle]="{ width: 20 * data.noOfCards + 'rem'}"
+>
+  <div class="row row-cols-1 row-cols-md-{{ data.noOfCards }}">
+    <div class="col d-flex justify-content-center" *ngFor="let t of data.cards">
+      <div
+        class="card {{ data.cardClass }}"
+        [ngClass]="{
+          disabled: t.disabled,
+          isDisplayFalse: t.isDisplay === false
+        }"
+        (click)="navigateTo(t)"
+      >
+        <div class="card-body d-flex align-content-center">
+          <h5 class="card-title align-self-center">{{ t.displayName }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

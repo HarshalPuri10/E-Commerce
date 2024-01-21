@@ -1,0 +1,605 @@
+ng g m printScreen --route print --module=app.module
+ng g c print-screen/aas-ad-print-screen
+ng g c print-screen/GINPrintScreen
+
+ng g c default/hr/transactions/iBASUploadAttendance/screens/product-code-list
+
+
+
+ng g m default/stores/master/SAC --route sac --module=master.module
+ng g m default/stores/master/suppliers --route suppliers --module=master.module
+ng g m default/stores/master/items --route items --module=master.module
+ng g m default/stores/master/services --route services --module=master.module
+ng g m default/stores/master/services --route services --module=master.module
+
+ng g c default/stores/transactions/upload-direct-inventory/screens/grn-location-mapping
+
+
+ng g directive shared/directives/access-control
+ng g c default/purchase/master/items/screens/item-docs-upload
+ng g c default/purchase/master/items/screens/gen-specs
+ng g c default/purchase/master/items/screens/item-attributes
+ng g c default/purchase/master/items/screens/item-tech-specs
+ng g c default/purchase/master/items/screens/item-remarks
+ng g c default/purchase/master/items/screens/QC-level
+
+ng g c default/sales/master/items/screens/QC-level
+
+ng g c default/purchase/master/external-service-provider/screens/provider-contact-details
+ng g c default/purchase/master/HSN/screens/HSN-form
+
+ng g c default/purchase/master/SAC/screens/SAC-list
+ng g c default/purchase/master/SAC/screens/SAC-form
+ng g c default/purchase/master/suppliers/screens/suppliers-list
+ng g c default/purchase/master/suppliers/screens/suppliers-form
+ng g c default/purchase/master/items/screens/items-list
+ng g c default/purchase/master/items/screens/items-form
+ng g c default/purchase/master/services/screens/services-list
+ng g c default/purchase/master/services/screens/services-form
+
+
+
+ng g m default/sales/transactions/service-purchase-order --route service_purchase_order --module=transactions.module
+
+
+ng g c default/purchase/transactions/generate-purchase-order/screens/PO-list
+ng g c default/purchase/transactions/generate-purchase-order/screens/PO-change-PT
+
+
+ng g c default/purchase/transactions/generate-purchase-order/screens/PO-list
+ng g c default/purchase/transactions/generate-purchase-order/screens/PO-form
+
+
+ng g c default/purchase/transactions/generate-purchase-order/screens/amend-po
+ng g c default/purchase/transactions/service-purchase-order/screens/SPO-list
+ng g c default/purchase/transactions/service-purchase-order/screens/SPO-form
+
+ng g m default/purchase/transactions/short-po-closing --route short_po_closing --module=transactions.module
+
+ng g c default/purchase/transactions/short-po-closing/Cancel-po-line
+
+
+ng g m default/purchase/reports/purchase-order --route purchase_order --module=reports.module
+ng g m default/purchase/reports/service-purchase-order --route service_purchase_order --module=reports.module
+ng g m default/purchase/reports/PPV --route PPV --module=reports.module
+ng g m default/purchase/reports/supplier-evaluationR --route supplier-evaluationR --module=reports.module
+
+ng g c default/purchase/reports/supplier-evaluation-r/supplier-evaluation-month
+
+
+
+ng g m default/purchase/reports/supplier --route supplier --module=reports.module
+ng g m default/purchase/reports/item --route item --module=reports.module
+ng g m default/purchase/reports/purchase-order-status --route purchase_order_status --module=reports.module
+ng g m default/purchase/reports/purchase-order-history --route purchase_order_history --module=reports.module
+ng g m default/purchase/reports/purchase-order-summary-report --route purchase_order_summary_report --module=reports.module
+ng g m default/purchase/reports/purchase-cost-analysis --route purchase_cost_analysis --module=reports.module
+ng g m default/purchase/reports/debit-note-summary --route debit_note_summary --module=reports.module
+ng g m default/purchase/reports/debit-note-detail --route debit_note_detail --module=reports.module
+ng g m default/purchase/reports/PPV-summary --route PPV_summary --module=reports.module
+ng g m default/purchase/reports/PPV-by-supplier --route PPV_by_supplier --module=reports.module
+ng g m default/purchase/reports/PPV-details --route PPV_details --module=reports.module
+
+
+
+ng g c default/settings/transactions/product-code/screens/product-code-list
+ng g c default/settings/transactions/product-code/screens/product-code-form
+
+
+
+ng g c default/settings/components/tabs
+
+
+
+
+ng g c default/settings/master/auto-increment --route auto_increment --module=master.module
+ng g m default/settings/master/app-parameters --route app_parameters --module=master.module
+ng g m default/settings/master/product-code --route product_code --module=transactions.module
+
+
+ng g c default/settings/tabs/screens/master-tabs
+ng g c default/settings/tabs/screens/transactions-tabs
+ng g c default/settings/tabs/screens/reports-tabs
+
+
+
+
+
+ng g m default/hr/master/statutory-contribution --route statutory_contribution --module=master.module
+ng g m default/hr/master/salary-components --route salary_components --module=master.module
+ng g m default/hr/master/salary-master-MS --route salary_master_MS --module=master.module
+ng g m default/hr/master/paid-holidays --route paid_holidays --module=master.module
+
+ng g m default/settings/master/sales --route sales --module=master.module
+ng g m default/settings/master/purchase --route purchase --module=master.module
+ng g m default/settings/master/hr --route hr --module=master.module
+ng g m default/settings/master/NPD --route NPD --module=master.module
+ng g m default/settings/master/planning --route planning --module=master.module
+ng g m default/settings/master/production --route production --module=master.module
+
+
+ng g c default/settings/master/security-master/sub-module-management/screens/add-sub-module-roll
+
+
+ng g c default/settings/master/department-master/screens/department-form
+ng g c default/settings/master/department-master/screens/add-sub-dept
+
+
+ng g c default/hr/master/salary-master-MS/screens/salary-master-MS-list
+ng g c default/hr/master/salary-master-MS/screens/salary-master-MS-form
+ng g c default/hr/master/paid-holidays/screens/paid-holidays-list
+ng g c default/hr/master/paid-holidays/screens/paid-holidays-form
+ng g c default/hr/master/paid-leaves/screens/paid-leaves-list
+ng g c default/hr/master/paid-leaves/screens/paid-leaves-form
+
+ng g c default/hr/transactions/leave-adjustment/screens/leave-adjustment-list
+ng g c default/hr/transactions/leave-adjustment/screens/leave-adjustment-form
+ng g m default/hr/transactions/leave-adjustment --route leave_adjustment --module=transactions.module
+
+ng g c default/hr/transactions/salary-adv-summary/screens/salary-adv-summary-list
+ng g c default/hr/transactions/salary-adv-summary/screens/salary-adv-summary-form
+
+
+ng g m default/hr/transactions/salary-adv-summary --route salary_adv_summary --module=transactions.module
+ng g m default/hr/transactions/attendance-review --route attendance_review --module=transactions.module
+ng g m default/hr/transactions/payroll --route payroll --module=transactions.module
+
+ng g m default/hr/reports/leave-applicationR --route leave_applicationR --module=reports.module
+ng g m default/hr/reports/employee-attendanceR --route employee_attendanceR --module=reports.module
+ng g m default/hr/reports/payrollR --route payrollR --module=reports.module
+
+ng g m sales/home --route home --module=sales.module
+ng g m sales/master --route master --module=sales.module
+ng g m sales/transactions --route transactions --module=sales.module
+ng g m sales/reports --route reports --module=sales.module
+
+
+ng g m purchase/home --route home --module=purchase.module
+ng g m purchase/master --route master --module=purchase.module
+ng g m purchase/transactions --route transactions --module=purchase.module
+ng g m purchase/reports --route reports --module=purchase.module
+
+
+ng g m stores/home --route home --module=stores.module
+ng g m stores/master --route master --module=stores.module
+ng g m stores/transactions --route transactions --module=stores.module
+ng g m stores/reports --route reports --module=stores.module
+
+ng g m default/stores/reports/goods-inward-entry --route goods_inward_entry --module=reports.module
+
+
+
+ng g m production/home --route home --module=production.module
+ng g m production/master --route master --module=production.module
+ng g m production/transactions --route transactions --module=production.module
+ng g m production/reports --route reports --module=production.module
+
+
+ng g m quality/home --route home --module=quality.module
+ng g m quality/master --route master --module=quality.module
+ng g m quality/transactions --route transactions --module=quality.module
+ng g m quality/reports --route reports --module=quality.module
+
+
+ng g m accounts/home --route home --module=accounts.module
+ng g m accounts/master --route master --module=accounts.module
+ng g m accounts/transactions --route transactions --module=accounts.module
+ng g m accounts/reports --route reports --module=accounts.module
+
+
+ng g m settings/home --route home --module=settings.module
+ng g m settings/master --route master --module=settings.module
+ng g m settings/transactions --route transactions --module=settings.module
+ng g m settings/reports --route reports --module=settings.module
+
+
+ng g m supports/home --route home --module=supports.module
+ng g m supports/master --route master --module=supports.module
+ng g m supports/transactions --route transactions --module=supports.module
+ng g m supports/reports --route reports --module=supports.module
+
+
+ng g m default/supports/master/minutes-of-meeting --route minutes_of_meeting --module=master.module
+ng g m default/stores/reports/GINR --route GINR --module=reports.module
+ng g m default/stores/reports/FGINR --route FGINR --module=reports.module
+ng g m default/stores/reports/FGINR --route FGINR --module=reports.module
+
+ng g m default/stores/reports/reorder-level --route reorder_levelR --module=reports.module
+ng g m default/stores/reports/stock-aging --route stock_agingR --module=reports.module
+
+
+ng g m default/stores/transactions/GRN --route GRN --module=transactions.module
+ng g m default/stores/transactions/GIN --route GIN --module=transactions.module
+ng g m default/stores/transactions/inventory-correction --route inventory_correction --module=transactions.module
+ng g m default/stores/transactions/upload-direct-inventory --route upload_direct_inventory --module=transactions.module
+
+default/stores/transactions/upload-direct-inventory/screens/grn-location-mapping
+
+ng g m default/stores/transactions/FGIE --route fgie --module=transactions.module
+ng g m default/stores/transactions/ASN --route asn --module=transactions.module
+
+ng g m default/production/transactions/fg-correction --route fg_correction --module=transactions.module
+ng g c default/production/transactions/fg-correction/screens/fg-form
+
+ng g m default/stores/transactions/gie-direct --route gie-direct --module=transactions.module
+
+ng g c default/stores/transactions/GRN/screens/new-grn-list
+ng g c default/stores/transactions/GRN/screens/form
+ng g c default/stores/transactions/GRN/screens/new-grn-form
+ng g c default/stores/transactions/GIN/screens/list
+ng g c default/stores/transactions/GIN/screens/form
+ng g c default/stores/transactions/inventory-correction/screens/list
+ng g c default/stores/transactions/inventory-correction/screens/form
+ng g c default/stores/transactions/GIA-GR/screens/list
+ng g c default/stores/transactions/GIA-GR/screens/form
+ng g c default/stores/transactions/FGIE/screens/list
+ng g c default/stores/transactions/FGIE/screens/form
+ng g c default/stores/transactions/ASN/screens/list
+ng g c default/stores/transactions/ASN/screens/form
+ng g c default/stores/transactions/GT/screens/list
+ng g c default/stores/transactions/GT/screens/form
+
+ng g m default/finance/master/asset-master --route asset_master --module=master.module
+ng g c default/finance/master/asset-master/screens/asset-master-list
+ng g c default/finance/master/asset-master/screens/asset-master-form
+ng g c default/finance/master/asset-master/screens/components/asset-depreciation-modal
+ng g c default/finance/master/asset-master/screens/components/asset-energy-spec-modal
+
+
+
+ng g m default/quality/master/IP --route ip --module=master.module
+ng g m default/quality/master/IR --route ir --module=master.module
+ng g m default/quality/master/PDIR-T --route pdir_t --module=master.module
+
+
+ng g m default/quality/transactions/quality-inspection --route quality-inspection --module=transactions.module
+ng g m default/quality/transactions/quality-standards --route quality-standards --module=transactions.module
+ng g m default/quality/transactions/quality-tests --route quality-tests --module=transactions.module
+ng g m default/quality/transactions/defect-categories --route defect-categories --module=transactions.module
+ng g m default/quality/transactions/CAPA --route CAPA --module=transactions.module
+ng g m default/quality/transactions/quality-documents --route quality-documents --module=transactions.module
+ng g m default/quality/transactions/supplier-quality --route supplier-quality --module=transactions.module
+ng g m default/quality/transactions/quality-audit-checklist --route quality-audit-checklist --module=transactions.module
+ng g m default/quality/transactions/non-conformance-reports --route non-conformance-reports --module=transactions.module
+ng g m default/quality/transactions/quality-metrics --route quality-metrics --module=transactions.module
+
+
+ng g c default/quality/master/IP/screens/IP-list
+ng g c default/quality/master/IP/screens/IP-form
+ng g c default/quality/master/IR/screens/IR-list
+ng g c default/quality/master/IR/screens/IR-form
+ng g c default/quality/master/PDIR-T/screens/PDIR-T-list
+ng g c default/quality/master/PDIR-T/screens/PDIR-T-form
+
+ng g m default/quality/transactions/resolve-discrepancy --route resolve_discrepancy --module=transactions.module
+
+ng g c default/quality/transactions/resolve-discrepancy/screens/discrepancy-list
+ng g c default/quality/transactions/resolve-discrepancy/screens/discrepancy-form
+
+ng g m default/sales/master/sales-payment-terms --route sales_payment_terms --module=master.module
+
+ng g c default/sales/master/sales-payment-terms/screens/sales-payment-terms-form
+ng g c default/sales/master/sales-payment-terms/screens/sales-payment-terms-list
+
+ng g m default/purchase/master/purchase-payment-terms --route purchase_payment_terms --module=master.module
+
+ng g c default/purchase/master/purchase-payment-terms/screens/purchase-payment-terms-form
+ng g c default/purchase/master/purchase-payment-terms/screens/purchase-payment-terms-list
+
+
+
+ng g m default/dispatch/transactions/asn --route asn --module=transactions.module
+ng g m default/dispatch/master/customer-address --route customer_address --module=master.module
+
+ng g c default/dispatch/master/customer-address/screens/customer-address-form
+ng g c default/dispatch/transactions/asn/screens/asn-list
+
+ng g m default/purchase/master/capital-goods --route capital-goods --module=master.module
+ng g m default/purchase/master/item-category --route item-category --module=master.module
+ng g c default/purchase/master/capital-goods/screens/capital-goods-form
+ng g c default/purchase/master/capital-goods/screens/capital-goods-list
+
+ng g c shared/modals/npd-review-history
+
+ng g c print-screen/templates-AAS/aas-domestics
+ng g c print-screen/rmi-print-screen
+
+ng g m default/sales/reports/service-invoice --route service_invoice --module=reports.module
+
+ng g s services/purchase/debitNote
+ng g m default/purchase/reports/purchase-rate-analysis --route purchase_rate_analysis --module=reports.module
+ng g m default/settings/transactions/debit-note --route debit-note --module=transactions.module
+ng g c default/settings/transactions/debit-note/screens/debit-list
+ng g c default/settings/transactions/debit-note/screens/debit-form
+
+
+
+ng g s services/sales/creditNote
+ng g m default/sales/reports/credit-note --route credit-note --module=reports.module
+
+ng g m default/sales/transactions/service-invoice --route service_invoice --module=transactions.module
+ng g m default/sales/transactions/short-PO  --route short_PO  --module=transactions.module
+
+
+ng g c default/sales/transactions/service-invoice/screens/service-invoice-list
+ng g c default/sales/transactions/service-invoice/screens/service-invoice-form
+
+ng g m default/settings/master/child-item-category --route child_item_category --module=master.module
+ng g c default/settings/master/child-item-category/screens/child-item-category-form
+ng g c default/settings/master/child-item-category/screens/child-item-category-list
+
+ng g m default/sales/reports/credit-note --route credit-note --module=reports.module
+ng g c print-screen/creditNotePrintScreen
+
+ng g m default/business-leads/transactions/npd-review-feasibility --route npd_review_feasibility --module=transactions.module
+ng g c default/business-leads/transactions/npd-review-feasibility/screens/review-feasibility-list
+ng g c default/business-leads/transactions/npd-review-feasibility/screens/components/technical
+ng g c default/business-leads/transactions/npd-review-feasibility/screens/components/economic
+ng g c default/business-leads/transactions/npd-review-feasibility/screens/components/legal
+ng g c default/business-leads/transactions/npd-review-feasibility/screens/components/operational
+ng g c default/business-leads/transactions/npd-request/screens/variants_modal
+
+
+ng g m default/business-leads/reports/npd-lost-order-analysis --route npd_lost_order_analysis --module=reports.module
+
+
+ng g m default/business-leads/master/npd-master --route npd --module=master.module
+ng g c default/business-leads/master/npd-master/screens/npd-list
+ng g c default/business-leads/master/npd-master/screens/npd-form
+ng g c default/business-leads/master/prospect/screens/convert-to-customer
+
+
+ng g m default/business-leads/reports/lead-conversion --route lead_conversion --module=reports.module
+ng g m default/business-leads/reports/opportunity-pipeline --route opportunity_pipeline --module=reports.module
+ng g m default/business-leads/reports/salesperson-performance --route salesperson_performance --module=reports.module
+ng g m default/business-leads/reports/lead-aging --route lead_aging --module=reports.module
+ng g m default/business-leads/reports/opportunity-forecast --route opportunity_forecast --module=reports.module
+ng g m default/business-leads/reports/win-loss-analysis --route win-loss_analysis --module=reports.module
+ng g m default/business-leads/reports/lead-response-time --route lead_response_time --module=reports.module
+ng g m default/business-leads/reports/activity --route activity --module=reports.module
+
+
+
+
+
+ng g m default/sales/reports/customer --route customer --module=reports.module
+
+ng g m default/sales/reports/SKU --route SKU --module=reports.module
+
+
+ng g m default/production/reports/gr-fulfillment-status --route gr_fulfillment_status_report --module=reports.module
+ng g m default/stores/reports/SKU --route SKU --module=reports.module
+ng g m default/stores/reports/Goods-Receipt-Note-Summary --route Goods_Receipt_Note_Summary --module=reports.module
+ng g m default/stores/reports/Goods-Receipt-Note-Detail --route Goods_Receipt_Note_Detail --module=reports.module
+ng g m default/stores/reports/Goods-Receipt-Note-Discrepancy --route Goods_Receipt_Note_Discrepancy --module=reports.module
+ng g m default/stores/reports/Goods-Receipt-Note-Trend --route Goods_Receipt_Note_Trend --module=reports.module
+ng g m default/stores/reports/Goods-Inward-Entry-Summary  --route Goods_Inward_Entry_Summary  --module=reports.module
+ng g m default/stores/reports/Goods-Inward-Entry-Detail  --route Goods_Inward_Entry_Detail  --module=reports.module
+ng g m default/stores/reports/Inwarded-Quantity-Analysis --route Inwarded_Quantity_Analysis --module=reports.module
+ng g m default/stores/reports/Inwarded-Value-Analysis --route Inwarded_Value_Analysis --module=reports.module
+ng g m default/stores/reports/raw-material-inspection --route raw_material_inspection --module=reports.module
+
+
+ng g m default/sales/transactions/sales-debit-note --route sales_debit_note --module=transactions.module
+ng g c default/sales/transactions/sales-debit-note/screens/sales-debit-note-form
+ng g c default/sales/transactions/sales-debit-note/screens/sales-debit-note-list
+
+
+ng g c default/sales/transactions/sales-forecast/screens/forecast-schedule-modal
+ng g c default/sales/transactions/task-scheduling/screens/task-scheduling-form
+
+ng g m default/sales/master/generate-e-way-bills --route generate-e-way-bills --module=master.module
+ng g m default/purchase/master/transporter --route transporter --module=master.module
+
+ng g m default/sales/transactions/generate-e-way-bills --route generate-e-way-bills --module=transactions.module
+ng g c default/sales/transactions/generate-e-way-bills/screens/generate-e-way-bills-form
+
+ng g m default/sales/transactions/generate-e-invoice --route generate-e-invoice --module=transactions.module
+ng g c default/sales/master/sku/screens/sku-attributes
+ng g c default/sales/master/sku/screens/sku-other-info
+ng g c default/sales/master/sku/screens/sku-specification
+ng g c default/sales/master/sku/screens/sku-drawing
+ng g c default/sales/master/sku/screens/sku-gen-specs
+ng g c default/sales/master/sku/screens/sku-storage
+ng g c default/sales/master/sku/screens/cost-sheet
+ng g c default/sales/master/sku/screens/bom-dim
+
+ng g c shared/modals/bom-cost-breakdown
+ng g c shared/modals/view-npd-request-details
+ng g c shared/modals/sub-category
+
+ng g c shared/modals/Cancel_so_line_details
+
+
+ng g m default/finance/master/bill-of-material/screens/bom-of-product --route bom_of_product --module=bill-of-material.module
+
+ng g c default/finance/master/bill-of-material/screens/bom-of-product/bom-of-product-list
+ng g c default/finance/master/bill-of-material/screens/bom-of-product/bom-of-product-form
+ng g c default/finance/master/routing-master/screens/resource-management
+
+ng g m default/production/transactions/child-part-production/screens/gr-child-part --route gr_child_part --module=child-part-production.module
+ng g c default/production/transactions/child-part-production/screens/gr-child-part/gr-child-part-list
+ng g c default/production/transactions/child-part-production/screens/gr-child-part/gr-child-part-form
+
+
+ng g c default/planning/transactions/roll-to-sheet-con/screens/roll-to-sheet-sfg
+ng g c default/planning/transactions/roll-to-roll-con/screens/roll-to-roll-form
+ng g c default/planning/transactions/roll-to-roll-con/screens/slitting-process-form
+ng g c default/planning/transactions/roll-to-roll-con/screens/rolltoroll-sfg-form
+ng g c default/planning/transactions/roll-to-roll-con/screens/confirm-output-modal
+
+
+
+ng g m default/supports/reports/ticket-details --route ticket_details --module=reports.module
+
+ng g m default/planning/reports/mrn-report-supplier-wise --route mrn_report_supplier_wise --module=reports.module
+ng g m default/planning/reports/mrn-report-item-wise --route mrn_report_item_wise --module=reports.module
+ng g m default/planning/reports/mrn-report-status-wise --route mrn_report_status_wise --module=reports.module
+
+
+ng g m default/stores/reports/grn-report-supplier-wise --route grn_report_supplier_wise --module=reports.module
+ng g m default/stores/reports/grn-report-item-wise --route grn_report_item_wise --module=reports.module
+ng g m default/stores/reports/gi-report --route gi_report --module=reports.module
+
+
+
+ng g m default/stores/reports/ir-report-name-wise --route ir_report_name_wise --module=reports.module
+
+
+
+ng g m default/planning/master/process-resource-management --route process_resource_management --module=master.module
+ng g c default/planning/master/process-resource-management/screens/process-resource-management-list
+ng g c default/planning/master/process-resource-management/screens/process-resource-management-form
+
+ng g c default/planning/master/product-master/screens/components/product-attributes-modal
+ng g c default/planning/master/product-master/screens/components/product-bom-dim-modal
+ng g c default/planning/master/product-master/screens/components/product-storage-modal
+ng g c default/planning/master/product-master/screens/components/product-remarks-modal
+
+ng g c default/planning/master/child-item/screens/service-provider-details
+ng g c default/planning/master/child-item/screens/stock-levels
+
+
+ng g c print-screen/sale-debit-note-print
+
+
+ng g m default/business-leads/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/sales/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/planning/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/purchase/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/maintenance/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/quality/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/dispatch/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/hr/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/sales/reports/gr-fulfillment-status --route gr_fulfillment_status --module=reports.module
+ng g m default/sales/reports/sales-debit-note-report --route sales_debit_note_report --module=reports.module
+
+
+
+
+ng g m default/settings/master/purchase/purchase-category --route purchase_category --module=master.module
+ng g c default/settings/master/purchase/purchase-category/screens/purchase-category-list
+ng g c default/settings/master/purchase/purchase-category/screens/purchase-category-form
+
+
+
+ng g c default/supports/access-denied 
+
+
+ng g m default/settings/transactions/audit --route audit --module=transactions.module
+ng g c default/settings/transactions/audit/screens/audit-form
+ng g c default/settings/transactions/audit/screens/audit-list
+
+
+
+
+ng g m default/purchase/reports/outstanding-po  --route outstanding_po --module=reports.module
+
+ng g m default/quality/master/specification-master --route specification-master --module=master.module
+ng g m default/quality/master/product-specifications --route product_specifications --module=master.module
+ng g c default/quality/master/product-specifications/screens/product-specifications-form
+ng g c default/quality/master/product-specifications/screens/product-specifications-list
+ng g c default/supports/master/minutes-of-meeting/screens/min-of-meeting-attendees
+
+
+ng g m default/business-leads/reports/npd-review-for-feasibility --route npd_review_for_feasibility --module=reports.module
+
+
+
+ng g m default/settings/master/quality-master --route quality_master --module=master.module
+
+ng g m default/settings/master/quality-master/customer-pdir-mapping --route customer_pdir_mapping --module=quality-master.module
+ng g c default/settings/master/quality-master/customer-pdir-mapping/screens/pdir-mapping-list
+ng g c default/settings/master/quality-master/customer-pdir-mapping/screens/pdir-mapping-form
+
+ng g c default/dispatch/transactions/shipment-creation/screens/components/view-drn-terms
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-bill-from
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-bill-to
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-ship-to
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-so-terms
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-shipment-details
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-other-charges
+ng g c default/dispatch/transactions/shipment-creation/screens/components/drn-packing-list
+
+
+
+ng g m default/business-leads/reports/pending-D-SKU-conversion --route pending_D-SKU_conversion --module=reports.module
+
+ng g m default/business-leads/reports/D-SKU-to-SKU-conversion --route D-SKU_to_SKU_conversion --module=reports.module
+
+
+
+ng g c print-screen/PDIR-Templates/TGY-PDIR-Entry
+ng g c print-screen/PDIR-Templates/IDMS-PDIR-Entry
+
+ng g m default/finance/reports/FG-inventory-value --route FG_inventory_value --module=reports.module
+
+ng g c default/quality/transactions/mrn/screens/components/mrn-remarks-modal
+ng g c default/quality/transactions/mrn/screens/components/grn-remarks-modal
+ng g c default/quality/transactions/mrn/screens/components/mrn-grn-remarks
+
+
+ng g m default/planning/master/grand-child-item --route grand_child_item --module=master.module
+ng g c default/planning/master//grand-child-item/screens//grand-child-item-list
+ng g c default/planning/master//grand-child-item/screens//grand-child-item-form
+
+ng g m default/settings/master/hr/employee-grade --route employee_grade --module=hr.module
+ng g c default/settings/master/hr/employee-grade/screens/employee_grade-list
+ng g c default/settings/master/hr/employee-grade/screens/employee_grade-form
+
+ng g m default/settings/master/hr/inco-terms --route inco_terms --module=hr.module
+ng g c default/settings/master/hr/inco-terms/screens/inco_terms-list
+ng g c default/settings/master/hr/inco-terms/screens/inco_terms-form
+
+ng g c default/settings/master/hr/employment-type/screens/employment_type-list
+ng g c default/settings/master/hr/employment-type/screens/employment_type-form
+ng g m default/settings/master/hr/employee-designation --route employee_designation --module=hr.module
+
+ng g m default/settings/master/hr/employee-department --route employee_department --module=hr.module
+ng g c default/settings/master/hr/employee-department/screens/employee_department-list
+ng g c default/settings/master/hr/employee-department/screens/employee_department-form
+
+ng g m default/settings/master/hr/joining-location --route joining_location --module=hr.module
+ng g c default/settings/master/hr/joining-location/screens/joining_location-list
+ng g c default/settings/master/hr/joining-location/screens/joining_location-form
+
+ng g m default/settings/master/purchase/transporter --route transporter --module=purchase.module
+ng g c default/settings/master/purchase/transporter/screens/transporter-list
+ng g c default/settings/master/purchase/transporter/screens/transporter-form
+
+ng g m default/settings/master/npd/operation-name --route operation_name --module=npd.module
+ng g c default/settings/master/npd/operation-name/screens/operation_name-list
+ng g c default/settings/master/npd/operation-name/screens/operation_name-form
+
+ng g m default/settings/master/sales/product-code --route product_code --module=sales.module
+ng g c default/settings/master/sales/product-code/screens/product_code-list
+ng g c default/settings/master/sales/product-code/screens/product_code-form
+
+ng g m default/settings/master/production/part-production-machine-name --route part_production_machine_name --module=production.module
+ng g c default/settings/master/production/part-production-machine-name/screens/part_production_machine_name-list
+ng g c default/settings/master/production/part-production-machine-name/screens/part_production_machine_name-form
+
+ng g m default/settings/master/npd/npd-product-category --route npd_product_category --module=npd.module
+ng g c default/settings/master/npd/npd-product-category/screens/npd_product_category-list
+ng g c default/settings/master/npd/npd-product-category/screens/npd_product_category-form
+
+ng g m default/settings/master/label-master/dynamic-label-card --route label_master --module=label-master.module
+
+
+ng g m default/settings/master/finance-master --route finance_master --module=master.module
+
+ng g m default/settings/master/finance-master/asset-class --route asset_type --module=finance-master.module
+ng g c default/settings/master/finance-master/asset-class/screens/asset-class-list
+ng g c default/settings/master/finance-master/asset-class/screens/asset-class-form
+
+ng g m default/settings/master/module-master --route module_master --module=master.module
+
+ng g m default/settings/master/module-master --route module_master --module=moduleMaster.module
+ng g c default/settings/master/module-master/screens/module-master-list
+ng g c default/settings/master/module-master/screens/module-master-form
+
+ng g m default/settings/master/setting-master --route setting_master --module=master.module
+
+
+
+ng g c default/stores/transactions/grn/screens/cancel-grn 

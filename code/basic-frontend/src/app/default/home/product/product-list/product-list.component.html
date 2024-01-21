@@ -1,0 +1,100 @@
+<div class="row tablePage">
+    <div class="col-md-11 table-body">
+        <div class="row table-header">
+            <div class="col">
+                <label class="heading">Product Summary</label>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button
+                class="btn btn-primary btn-add"
+                type="button"
+                (click)="navigateTo('/default/home/product-form', null, 'create')"
+            >
+                <i class="fa fa-plus-square fa-lg me-2" aria-hidden="true"></i>
+                Create Product
+            </button>
+        </div>
+
+        <hr class="row line-border" />
+        <div class="row px-3">
+            <!-- search filter -->
+            <div class="col-4">
+                <div class="d-flex">
+                    <div class="input-group-text bg-primary" id="basic-addon1">
+                        <i class="fa fa-search text-white" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            class="form-control"
+                            [(ngModel)]="search"
+                            (ngModelChange)="this.search$.next($event)"
+                        />
+                    </div>
+                </div>
+            </div>
+            <!-- pagination -->
+            <div class="col-4 d-flex justify-content-center">
+                <ngb-pagination
+                    [collectionSize]="collection"
+                    #numPagesExp3
+                    [(page)]="page"
+                    [pageSize]="pageSize"
+                    [maxSize]="5"
+                    [rotate]="true"
+                    [ellipses]="false"
+                    [boundaryLinks]="true"
+                    (pageChange)="commonChange('PAGE', page)"
+                    class="pagination"
+                ></ngb-pagination>
+            </div>
+            <!-- excel download -->
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="bg-primary">
+                    <tr class="text-white">
+                        <th sortable="name" (sort)="onSort($event)">Product Name</th>
+                        <th sortable="category" (sort)="onSort($event)">Category</th>
+                        <th sortable="description" (sort)="onSort($event)">Description</th>
+                        <th sortable="price" (sort)="onSort($event)">Price</th>
+                        <th sortable="currency" (sort)="onSort($event)">Currency</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let u of tableData; trackBy: trackByFn">
+                        <td>{{ u.name }}</td>
+                        <td>{{ u.category }}</td>
+                        <td>{{ u.description }}</td>
+                        <td>{{ u.price }}</td>
+                        <td>{{ u.currency }}</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn"></button>
+                                <div class="dropdown-content">
+                                    <a
+                                        href="javascript:void(0)"
+                                        (click)="navigateTo('/default/home/product-form', u, 'view')"
+                                    >
+                                        <i class="fa fa-eye fa-lg me-2 text-primary" aria-hidden="true"></i>
+                                        View
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
+                                        (click)="navigateTo('/default/home/product-form', u, 'edit')"
+                                    >
+                                        <i class="fa fa-pencil-square-o fa-lg me-2 text-primary" aria-hidden="true"></i>
+                                        Edit
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row login-card">
+    <div class="col part-1">
+      <div class="text-center">
+        <img src="./assets/companies/login_logo.svg" class="img-fluid" alt="" />
+      </div>
+    </div>
+    <div class="col part-2">
+      <div class="text-center">
+        Find Your Account
+        <form class="text-start" [formGroup]="form">
+          <div class="">
+            <label class="form-label">
+              User ID
+              <span class="text-danger">*</span>
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter User Name"
+              formControlName="email"
+              aria-label="Large"
+            />
+          </div>
+          <div class="d-grid">
+            <button
+              class="btn btn-primary login-btn mt-4"
+              type="submit"
+              (click)="forget()"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="w-100"></div>
+  </div>
+</div>

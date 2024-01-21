@@ -1,0 +1,76 @@
+<form [formGroup]="form">
+    <div class="row justify-content-center form-page mt-5">
+        <div class="col-md-11 mt-3 card-form">
+            <div class="row form-header mb-2">
+                <div class="col heading ms-3">
+                    <label>Product [{{ this.action | titlecase }}]</label>
+                </div>
+            </div>
+            <div class="form-body px-0">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label">Product Name<span class="text-danger"> *</span></label
+                        ><input class="form-control" formControlName="name" type="text" />
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Category<span class="text-danger"> *</span></label>
+                        <input class="form-control" formControlName="category" type="text" />
+                    </div>
+                    <div class="col">
+                        <label class="form-label">Currency<span class="text-danger"> *</span></label>
+                        <select class="form-select" formControlName="currency">
+                            <option [value]="''" disabled="">Select Currency</option>
+                            <option [value]="item" *ngFor="let item of currencyList">
+                                {{ item }}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4">
+                        <label class="form-label">Price<span class="text-danger"> *</span></label>
+                        <input class="form-control" formControlName="price" type="number" />
+                    </div>
+                    <div class="col-md-8 mb-4">
+                        <label class="form-label">Description<span class="text-danger"></span></label>
+
+                        <textarea class="form-control form-text-area" formControlName="description" rows="2"></textarea>
+                    </div>
+                </div>
+                <div class="row mb-4 mt-3 d-flex align-items-center">
+                    <div class="col-md-4">
+                        <label class="form-label"
+                            >Free Shipping
+                            <input class="form-check-input" type="checkbox" formControlName="freeShipping" />
+                        </label>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h2>Multiple File Upload</h2>
+                    <div class="mb-3">
+                        <label for="fileUpload" class="form-label">Select files:</label>
+                        <input
+                            type="file"
+                            id="fileUpload"
+                            class="form-control"
+                            multiple
+                            (change)="selectFiles($event)"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div *ngIf="!['view'].includes(action)" class="d-flex justify-content-center mb-3">
+                        <div class="d-grid col-md-1 me-5">
+                            <button class="btn btn-primary" type="button" (click)="reset()">Reset</button>
+                        </div>
+                        <div class="d-grid col-md-1">
+                            <button type="submit" class="btn btn-primary" (click)="submit()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

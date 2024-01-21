@@ -1,0 +1,16 @@
+export enum Status {
+  OPENED = 'Opened',
+  CREATED = 'Created',
+  APPROVED = 'Approved',
+  REJECTED = 'Rejected',
+  CANCELLED = 'Cancelled',
+  DRAFT = 'Draft',
+  SUBMITTED = 'Submitted',
+  RECOMMEND = 'Recommend',
+  INVOICED = 'Invoiced',
+  AWAITING_APPROVAL = 'Awaiting Approval',
+  GRN_PARTIAL_CREATED = 'GRN Partial Created',
+  GRN_CREATED = 'GRN Created',
+  CLOSED = 'Closed',
+  RG = 'Report Generated',
+}

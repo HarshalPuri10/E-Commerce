@@ -1,0 +1,10 @@
+.alert-danger {
+  color: red;
+ font-weight: 500;
+ font-size: 1.2rem;
+  background-color: transparent;
+  border-color: transparent;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

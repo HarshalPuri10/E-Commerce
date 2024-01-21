@@ -1,0 +1,21 @@
+
+.main {
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 4.7rem) !important;
+
+    .sideNav-content {
+      width: 16.6rem !important;
+      height: 100% !important;
+      padding-top: 0.2rem;
+    }
+
+    .main-content {
+      padding-top: 0.2rem;
+      width: calc(100% - 16.6rem) !important;
+      // height: calc(100% - var(--vh-font-0)) !important;
+      height: 100% !important;
+      // position: absolute;
+      overflow-y: auto;
+    }
+  }

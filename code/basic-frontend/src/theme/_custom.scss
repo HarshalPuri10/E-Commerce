@@ -1,0 +1,42 @@
+@import "dashboard";
+@import "form";
+@import "table";
+@import "tabs";
+@import "_img_btn";
+@import "print";
+@import "_report_table";
+
+
+.text-label {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 400 !important;
+  color: rgb(70, 70, 70) !important;
+}
+
+.btn,
+.btn-check:checked+.btn,
+.btn-check:active+.btn,
+.btn:hover,
+.btn.active,
+.btn.focus,
+.btn.show {
+  font-weight: 400 !important;
+  font-size: 1.4rem !important;
+  color: white !important;
+  border-radius: 2px;
+}
+
+
+
+.isDisable {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.toast-container {
+  font-size: 1.4rem !important;
+}
+.my-tooltip-class{
+  font-size: 1.4rem !important;
+}

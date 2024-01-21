@@ -1,0 +1,107 @@
+<div class="container-fluid border-bottom mb-5">
+  <div class="row d-flex align-self-center">
+    <div class="col-4 d-flex text-center header-menu my-1">
+      <ng-container *ngIf="menuData.homeDisplay">
+        <div
+          *ngIf="activeTab !== 'HOME'"
+          (click)="navigateTo(menuData.homeUrl, 'HOME')"
+        >
+          <img
+            class="mt-1"
+            src="./assets/new_icons/Icon_home_Active.svg"
+            alt=""
+          />
+        </div>
+        <div
+          *ngIf="activeTab === 'HOME'"
+          (click)="navigateTo(menuData.homeUrl, 'HOME')"
+        >
+          <img class="mt-1" src="./assets/new_icons/Icon_home.svg" alt="" />
+        </div>
+
+        <span class="stroke py-1"
+          ><img src="./assets/new_icons/redstroke.svg" alt="" />
+        </span>
+      </ng-container>
+
+      <div (click)="goBack()">
+        <img
+          class="mt-1"
+          src="./assets/new_icons/icon_previous.svg"
+          alt=""
+          width="20"
+        />
+      </div>
+      <span class="stroke py-1"
+        ><img src="./assets/new_icons/redstroke.svg" alt=""
+      /></span>
+      <!-- Master -->
+      <ng-container *ngIf="menuData.masterDisplay">
+        <span
+          class="mt-1"
+          (click)="navigateTo(menuData.masterUrl, 'MASTER')"
+          [ngClass]="activeTab == 'MASTER' ? 'activeM' : ''"
+        >
+          {{ menuData.masterTitle }}
+        </span>
+        <span class="stroke py-1">
+          <img src="./assets/new_icons/redstroke.svg" alt="" />
+        </span>
+      </ng-container>
+      <!-- Transactions -->
+      <ng-container *ngIf="menuData.transactionDisplay">
+        <span
+          (click)="navigateTo(menuData.transactionUrl, 'TRANSACTION')"
+          [ngClass]="activeTab == 'TRANSACTION' ? 'activeT' : ''"
+        >
+          {{ menuData.transactionTitle }}
+        </span>
+        <span class="stroke py-1" *ngIf="menuData.reportDisplay">
+          <img src="./assets/new_icons/redstroke.svg" alt="" />
+        </span>
+      </ng-container>
+      <!-- Reports -->
+      <ng-container *ngIf="menuData.reportDisplay">
+        <span
+          (click)="navigateTo(menuData.reportUrl, 'REPORT')"
+          [ngClass]="activeTab == 'REPORT' ? 'activeR' : ''"
+        >
+          {{ menuData.reportTitle }}
+        </span>
+      </ng-container>
+    </div>
+
+    <div
+      class="col-4 d-flex justify-content-center my-2"
+      style="align-items: end"
+      *ngIf="menuData.title"
+    >
+      <h6
+        class="header-menu"
+        [ngClass]="
+          activeTab == 'MASTER'
+            ? 'activeMT'
+            : activeTab == 'TRANSACTION'
+            ? 'activeTT'
+            : activeTab == 'REPORT'
+            ? 'activeRT'
+            : ''
+        "
+      >
+        {{ menuData.title }}
+        <span *ngIf="menuData.type" class="header-menu-type">
+          [ {{ menuData.type }} ]
+        </span>
+      </h6>
+    </div>
+    <div
+      class="col-4 d-flex justify-content-end my-2"
+      style="align-items: end"
+      *ngIf="menuData.subTitle"
+    >
+      <h6 class="header-menu menuData-subTitle">
+        {{ menuData.subTitle }}
+      </h6>
+    </div>
+  </div>
+</div>

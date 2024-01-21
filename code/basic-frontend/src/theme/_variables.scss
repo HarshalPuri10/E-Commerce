@@ -1,0 +1,27 @@
+$primary: #007daf;
+$secondary: #007daf;
+// $secondary: #a0a0af;
+$tertiary: #a0a0af;
+$success: #198754;
+$info: #007daf;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #464646;
+$white: #ffffff;
+$cyan:#009696;
+// Variable overrides
+$theme-colors: (
+    primary: $primary,
+    tertiary:$tertiary,
+    secondary: $secondary,
+    success: $success,
+    info:$info,
+    warning: $warning,
+    danger: $danger,
+    light: $light,
+    dark:$dark,
+    white: $white,
+    cyan:$cyan
+);
+$grid-gutter-width: 3.7rem;

@@ -1,0 +1,33 @@
+export interface PODetails {
+  _id?: string;
+  POLineNumber: number;
+  item: string;
+  name: string;
+  description: string;
+  itemCode: string;
+  itemName: string;
+  itemDescription: string;
+  UOM: string;
+  unitConversion: string;
+  primaryUnit: string;
+  POQty: number;
+  standardRate: string;
+  purchaseRate: number;
+  lineValue: number;
+  linePPV: number;
+  deliveryDate: string;
+  gst: string;
+  igst: string;
+  cgst: string;
+  sgst: string;
+  lineRemarks: string;
+  receivedQty: string;
+  invoicedQty: string;
+  balancedQty: string;
+  previousGRNQty: string;
+  canceledQty: string;
+  canceledReason: string;
+  markedForAlternateSupplier: string;
+  deliveryCount: any;
+  deliverySchedule: any;
+}

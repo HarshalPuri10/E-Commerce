@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center">
+  <div class="me-3 align-self-end align-items-baseline">
+    <button 
+      type="button"
+      [ngClass]="type === 'create' ? 'btn btn-primary py-1' : 'btn btn-primary py-1 #b1'"
+      (click)="fileInput.click()"
+    >
+      Select File
+    </button>
+    <input
+      #fileInput
+      type="file"
+      hidden
+      accept=".png,.jpeg,.jpg,.pdf,.svg"
+      (change)="fileChosen($event)"
+    />
+  </div>
+
+  <div class="me-3 w-50">
+    <div class="text-center">
+      <label class="form-label"> {{ label }} </label>
+    </div>
+    <input
+      class="form-control"
+      type="text"
+      name="NameofFile"
+      [value]="fileName"
+      readOnly
+    />
+  </div>
+
+  <div class="align-self-end">
+    <a
+      class="btn btn-primary px-5 py-1"
+      [ngClass]="!url ? 'disabled' : ''"
+      [href]="url"
+      target="_blank"
+      [download]="fileName"
+    >
+      View
+    </a>
+  </div>
+</div>

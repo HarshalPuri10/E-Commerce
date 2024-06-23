@@ -12,24 +12,25 @@ import fs from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { insertSuperAdmin } from "./app/helpers/utility.js";
-
+import swaggerHandler from "./app/utilities/swaggerHandler.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 env.config();
-
 const app = express();
 app.use(cors("*"));
 mongooseCon(app);
 app.use(logger("dev"));
-app.use("/", configExpressJwt());
+app.use("/v1", configExpressJwt());
 app.use(bodyParser.json());
 app.use(customResponse);
 app.use("/assets", express.static(join(__dirname, "assets")));
 insertSuperAdmin();
 
+swaggerHandler.setup(app);
 //Route Prefixes
 app.use("/", apiRouter);
 
 app.set("port", CONSTANTS.port || 5000);
+
 app.listen(app.get("port"), () => {
   console.log(`Server Running on PORT ${app.get("port")}`);
 });

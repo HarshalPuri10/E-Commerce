@@ -58,6 +58,28 @@ export const create = asyncHandler(async (req, res) => {
     return res.sendStatus(500).send({ error: "Internal Server Error" });
   }
 });
+/**
+ * @swagger
+ * /v1/auth/user/login:
+ *   post:
+ *     description: Login
+ *     parameters:
+ *       - name: email
+ *         in: query
+ *         description: User email
+ *         required: true
+ *         schema:
+ *           type: string
+ *       - name: password
+ *         in: query
+ *         description: User password
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       '200':
+ *         description: A successful response
+ */
 export const login = asyncHandler(async (req, res) => {
   try {
     let existingUser = await findOneUser({

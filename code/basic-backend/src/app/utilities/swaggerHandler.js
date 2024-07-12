@@ -8,6 +8,7 @@ class SwaggerHandler {
   constructor() {}
   setup(app) {
     app.use("/api-docs", serve, _setup(swaggerOutput));
+    // this.updateSwaggerDoc();
   }
   async updateSwaggerDoc() {
     let schemaArray = await schemaHandler.loadSchemas();
@@ -19,7 +20,11 @@ class SwaggerHandler {
     if (Object.keys(swaggerOutputFile).length != 0) {
       let paths = Array.from(
         new Set(
-          Object.keys(swaggerOutputFile.paths).map((path) => path.split("/")[2])
+          Object.keys(swaggerOutputFile.paths).map((path) => {
+            path = path.split("/");
+            path = `/${path[1]}/${path[2]}`;
+            return path;
+          })
         )
       );
       for (const path of paths) {
